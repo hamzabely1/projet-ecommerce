@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\articlecontroller;
+use App\Http\Controllers\postcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::middleware([
     'auth:sanctum',
@@ -29,3 +27,6 @@ Route::middleware([
 });
 
 Route::get('/',[articlecontroller::class,'index']);
+
+Route::get('/post/{id}',[postcontroller::class,'post']);
+

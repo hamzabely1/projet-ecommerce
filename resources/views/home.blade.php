@@ -23,68 +23,23 @@
 
 <div class="container">
     <div class="row flex">
+@foreach ($article as $key => $articles)
+
       <div class="qua col-md-3 d-flex flex-column">
-        <img src="{{asset('img/kaido.jpg')}}"   style="height: 200px; width: 200px;" alt="">
+          <p>{{$articles->nom}}</p>
+        <img src={{$articles->image}}  style="height: 200px; width: 200px;" alt="">
           <div id="quaa"><button type="button" class="btn btn-pericolo"
           style="height: 100%;">Achète</button></div>
 
 
           <div id="quaa1">
-            <div id="quaa1"><button type="button" class="btn btn-"
-                data-bs-target="#exampleModal" data-bs-toggle="modal"
-                style="height: 100%; color: white;"><i>info</i></button></div>
+            <div id="quaa1"><a href="post/{{$key = $key +2 }}">info</a></div>
           </div>
 
 
           <br>
       </div>
 
-      <div class="qua col-md-3 d-flex flex-column">
-        <img src="{{asset('img/zoro.jpg')}}"   style="height: 200px; width:200px;" alt="">
-          <div id="quaa"><button type="button" class="btn btn-pericolo"
-          style="height: 100%;">Achète</button></div>
-
-
-          <div id="quaa1">
-            <div id="quaa1"><button type="button" class="btn btn-"
-                data-bs-target="#exampleModal" data-bs-toggle="modal"
-                style="height: 100%; color: white;"><i>info</i></button></div>
-          </div>
-
-
-
-          <br>
-      </div>
-      <div class="qua col-md-3 d-flex flex-column">
-        <img src="{{asset('img/roger.jpg')}}"   style="height: 200px; width: 200px;" alt="">
-          <div id="quaa"><button type="button" class="btn btn-pericolo"
-          style="height: 100%;">Achète</button></div>
-
-
-          <div id="quaa1">
-            <div id="quaa1"><button type="button" class="btn btn-"
-                data-bs-target="#exampleModal" data-bs-toggle="modal"
-                style="height: 100%; color: white;"><i>info</i></button></div>
-          </div>
-
-
-          <br>
-      </div>
-      <div class="qua col-md-3 d-flex flex-column">
-        <img src="{{asset('img/dragon bool.jpg')}}"   style="height: 200px; width: 200px;" alt="">
-          <div id="quaa"><button type="button" class="btn btn-pericolo"
-          style="height: 100%;">Achète</button></div>
-
-
-          <div id="quaa1">
-            <div id="quaa1"><button type="button" class="btn btn-"
-                data-bs-target="#exampleModal" data-bs-toggle="modal"
-                style="height: 100%; color: white;"><i>info</i></button></div>
-          </div>
-
-          <br>
-      </div>*$
-    @foreach ($article as $key => $articles)
-<p>{{$articles->nom}}</p>
-    @endforeach
-
+      @endforeach
+   </div>
+</div>

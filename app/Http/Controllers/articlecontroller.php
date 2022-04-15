@@ -10,7 +10,7 @@ class articlecontroller extends Controller
     public function index(){
      $article = article::all();
     return view('home',compact('article'));
-    
+
     return view('home');
 
     }

@@ -35,6 +35,7 @@
 
                 <x-jet-button class="ml-4">
                     {{ __('Connexion') }}
+                
                 </x-jet-button>
             </div>
         </form>

@@ -30,3 +30,4 @@ Route::get('/',[articlecontroller::class,'index']);
 
 Route::get('/post/{id}',[postcontroller::class,'post']);
 
+Route::get('post/2',[articlecontroller::class,'index2']);

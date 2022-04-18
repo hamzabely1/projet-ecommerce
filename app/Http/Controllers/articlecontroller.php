@@ -11,7 +11,9 @@ class articlecontroller extends Controller
      $article = article::all();
     return view('home',compact('article'));
 
-    return view('home');
-
     }
+    public function index2(){
+        $article = article::all();
+        return view('post',compact('article'));
+       }
 }
